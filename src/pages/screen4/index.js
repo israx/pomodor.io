@@ -1,5 +1,8 @@
 import React from "react";
+import RewardsList from "./components/RewardList";
 
-const Rewards = () => <div>Rewards page</div>;
+const Rewards = () => {
+  return <RewardsList />;
+};
 
 export default Rewards;

@@ -1,0 +1,40 @@
+{
+  "rewards": [
+    {
+      "id": 1,
+      "name": "Super Hype Reward",
+      "description": "A coll description about the reward",
+      "cost": 2
+    },
+    {
+      "id": 2,
+      "name": "Amazing Reward",
+      "description": "A coll description about the reward",
+      "cost": 5
+    },
+    {
+      "id": 3,
+      "name": "Amazing Reward",
+      "description": "A coll description about the reward",
+      "cost": 5
+    },
+    {
+      "id": 4,
+      "name": "Amazing Reward",
+      "description": "A coll description about the reward",
+      "cost": 5
+    },
+    {
+      "id": 5,
+      "name": "Amazing Reward",
+      "description": "A coll description about the reward",
+      "cost": 5
+    },
+    {
+      "id": 6,
+      "name": "Amazing Reward",
+      "description": "A coll description about the reward",
+      "cost": 15
+    }
+  ]
+}

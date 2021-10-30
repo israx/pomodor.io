@@ -3,7 +3,7 @@ import { usePomodoroStateValue } from "../../state/pomodoros/index";
 import { useClockify } from "./hooks/useClockify";
 import Controls from "./components/controls/controls";
 import BreakControls from "./components/controls/breaks";
-
+import styled from "styled-components";
 const Home = () => {
   const [{ timerLabel }] = usePomodoroStateValue();
   const clockifiedValue = useClockify();
