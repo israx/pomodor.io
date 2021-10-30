@@ -2,7 +2,7 @@ import actions from "./actions";
 
 export const initialPomodoroState = {
   budyIndicator: false,
-  breakValue: 1,
+  breakValue: 5,
   longerBreakValue: 15,
   sessionValue: 25,
   timerValueInSeconds: 1500,
