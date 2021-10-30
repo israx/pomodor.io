@@ -19,18 +19,7 @@ const Nav = () => {
         <FontAwesomeIcon icon={faClock} />
       </Link>
       <Link to={Paths.about}>About</Link>
-      <Link to={Paths.learning}>
-        <Tab>
-          <FontAwesomeIcon icon={faLightbulb} />
-          Learning
-        </Tab>
-      </Link>
-      <Link to={Paths.reports}>
-        <Tab>
-          <FontAwesomeIcon icon={faChartBar} />
-          Report
-        </Tab>
-      </Link>
+
       <Link to={Paths.rewards}>
         <Tab>
           <FontAwesomeIcon icon={faAppleAlt} />
@@ -67,9 +56,6 @@ const StyledNav = styled.nav`
     transition: all 0.3s ease;
     color: var(--red);
     font-size: 2rem;
-    /* &:hover {
-      color: var(--red);
-    } */
   }
 
   @media screen and (min-width: 720px) {

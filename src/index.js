@@ -9,8 +9,8 @@ import pomodoroReducer, {
 } from "./state/pomodoros/reducer";
 import { PomodoroStateProvider } from "./state/pomodoros/index";
 // User state
-import { UserStateProvider } from "./state/username/index";
-import userReducer, { initialUserState } from "./state/username/reducer";
+import { UserStateProvider } from "./state/user/index";
+import userReducer, { initialUserState } from "./state/user/reducer";
 ReactDOM.render(
   <React.StrictMode>
     <PomodoroStateProvider

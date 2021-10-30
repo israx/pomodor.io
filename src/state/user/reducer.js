@@ -1,7 +1,7 @@
 import actions from "./actions";
 
 export const initialUserState = {
-  budyIndicator: false,
+  busyIndicator: false,
   username: {},
   rewards: [],
 };
@@ -18,9 +18,11 @@ const userReducer = (state = initialUserState, action) => {
         ...state,
         rewards: action.rewards,
       };
-    case actions.ADD_USERNAME: {
-    }
-
+    case actions.ADD_USERNAME:
+      return {
+        ...state,
+        username: action.username,
+      };
     default:
       return state;
   }
