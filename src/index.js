@@ -3,13 +3,22 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
+import pomodoroReducer, {
+  initialPomodoroState,
+} from "./state/pomodoros/reducer";
 
+import { PomodoroStateProvider } from "./state/pomodoros/index";
 ReactDOM.render(
-  <Router>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Router>,
+  <React.StrictMode>
+    <PomodoroStateProvider
+      reducer={pomodoroReducer}
+      initialPomodoroState={initialPomodoroState}
+    >
+      <Router>
+        <App />
+      </Router>
+    </PomodoroStateProvider>
+  </React.StrictMode>,
   document.getElementById("root")
 );
 
