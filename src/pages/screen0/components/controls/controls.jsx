@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause, faRedo } from "@fortawesome/free-solid-svg-icons";
 import { usePomodoroStateValue } from "../../../../state/pomodoros/index";
 import actionTypes from "../../../../state/pomodoros/actions";
+import { Button, ButtonsContainer } from "../../../../components/button";
 
 const Controls = () => {
   const [
@@ -96,15 +97,15 @@ const Controls = () => {
   });
 
   return (
-    <div className="controls__wrp">
-      <button type="button" id="start_stop" onClick={handlePlayPause}>
+    <ButtonsContainer>
+      <Button callback={handlePlayPause}>
         <FontAwesomeIcon icon={!busyIndicator ? faPlay : faPause} />
-      </button>
-      <button type="button" id="reset" onClick={handleReset}>
+      </Button>
+      <Button callback={handleReset}>
         <FontAwesomeIcon icon={faRedo} />
-      </button>
+      </Button>
       <audio id="beep" src={bellSoundUrl} ref={audioSoundRef} preload="auto" />
-    </div>
+    </ButtonsContainer>
   );
 };
 

@@ -1,5 +1,6 @@
 import { usePomodoroStateValue } from "../../../../state/pomodoros/index";
 import actionTypes from "../../../../state/pomodoros/actions";
+import { Button, ButtonsContainer } from "../../../../components/button";
 
 const BreaksControls = () => {
   const [{ longerBreakValue, breakValue }] = usePomodoroStateValue();
@@ -31,10 +32,10 @@ const BreaksControls = () => {
     });
   };
   return (
-    <div>
-      <button onClick={handleShortBreak}>{breakValue}</button>
-      <button onClick={handleLargerBreak}>{longerBreakValue}</button>
-    </div>
+    <ButtonsContainer>
+      <Button callback={handleShortBreak}>{breakValue}</Button>
+      <Button callback={handleLargerBreak}>{longerBreakValue}</Button>
+    </ButtonsContainer>
   );
 };
 
