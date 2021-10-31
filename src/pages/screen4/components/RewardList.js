@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useUserStateValue } from "../../../state/user/index";
+import actionTypes from "../../../state/user/actions";
 import axios from "axios";
 import rewardsJson from "../../../mockedData.json";
-import actionTypes from "../../../state/user/actions";
+
 import RewardItem from "./RewardItem";
 
 const RewardsList = () => {
@@ -12,8 +13,6 @@ const RewardsList = () => {
   useEffect(() => {
     getRewards();
   }, []);
-
-  console.log(rewards);
 
   const getRewards = async () => {
     let rewardsList;

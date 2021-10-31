@@ -1,8 +1,14 @@
 import React from "react";
+import Tomatoes from "../../components/tomatoes";
 import RewardsList from "./components/RewardList";
 
 const Rewards = () => {
-  return <RewardsList />;
+  return (
+    <div>
+      <Tomatoes />
+      <RewardsList />;
+    </div>
+  );
 };
 
 export default Rewards;

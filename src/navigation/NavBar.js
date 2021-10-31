@@ -4,13 +4,7 @@ import styled from "styled-components";
 import { Paths } from "../Constants";
 //logo
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLightbulb,
-  faAppleAlt,
-  faChartBar,
-  faCog,
-  faClock,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAppleAlt, faCog, faClock } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
   return (
@@ -42,6 +36,9 @@ const Tab = styled.div`
 `;
 const StyledNav = styled.nav`
   --sidePadding: 3rem;
+  background-color: rgb(50, 76, 108);
+
+  color: white;
   height: 10vh;
   padding: 0.5rem var(--sidePadding);
   display: flex;
@@ -49,13 +46,15 @@ const StyledNav = styled.nav`
   gap: 1rem;
   justify-content: space-between;
   margin-bottom: 2rem;
-  background: var(--white);
 
   a {
     text-decoration: none;
     transition: all 0.3s ease;
-    color: var(--red);
+    color: white;
     font-size: 2rem;
+    &:hover {
+      color: rgb(225, 90, 80);
+    }
   }
 
   @media screen and (min-width: 720px) {

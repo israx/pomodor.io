@@ -4,6 +4,7 @@ export const initialUserState = {
   busyIndicator: false,
   username: {},
   rewards: [],
+  pomodoros: 10,
 };
 
 const userReducer = (state = initialUserState, action) => {
