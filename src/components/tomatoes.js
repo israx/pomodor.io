@@ -10,7 +10,9 @@ const Tomatoes = () => {
   }
   return (
     <MainContainer>
-      You have <TomatoesContainer>{tomatoeList}</TomatoesContainer> pomodoros.
+      You have{" "}
+      <TomatoesContainer>{pomodoros <= 0 ? 0 : tomatoeList}</TomatoesContainer>{" "}
+      pomodoros.
     </MainContainer>
   );
 };

@@ -1,7 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import { useUserStateValue } from "../../../state/user/index";
+import actionTypes from "../../../state/user/actions";
 
 const RewardItem = ({ name, description, cost }) => {
+  const [state, dispatch] = useUserStateValue();
+  const [{ pomodoros }] = useUserStateValue();
+
+  function buyReward() {
+    if (pomodoros <= 0) return;
+    dispatch({
+      ...state,
+      type: actionTypes.ADD_POMODOROS,
+      pomodoros: pomodoros - cost,
+    });
+  }
+
   return (
     <ItemContainer>
       <div>
@@ -10,7 +24,9 @@ const RewardItem = ({ name, description, cost }) => {
       </div>
 
       <div className="purchase-section">
-        <button className="buy-button">buy</button>
+        <button className="buy-button" onClick={buyReward}>
+          buy
+        </button>
         <h3 className="cost"> cost: {cost}</h3>
       </div>
     </ItemContainer>
