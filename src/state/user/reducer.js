@@ -24,6 +24,11 @@ const userReducer = (state = initialUserState, action) => {
         ...state,
         username: action.username,
       };
+    case actions.ADD_POMODOROS:
+      return {
+        ...state,
+        pomodoros: action.pomodoros,
+      };
     default:
       return state;
   }
